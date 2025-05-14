@@ -1,0 +1,1228 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://triskellib.github.io/api/">
+      
+      
+        <link rel="prev" href="../quickstart/">
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+    
+    
+      
+        <title>API - Triskel</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Triskel" class="md-header__button md-logo" aria-label="Triskel" data-md-component="logo">
+      
+  <img src="../assets/triskel_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Triskel
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/triskellib/triskel" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    triskellib/triskel
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../theory/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Theory
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../plugins/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Plugins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../quickstart/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Triskel" class="md-nav__button md-logo" aria-label="Triskel" data-md-component="logo">
+      
+  <img src="../assets/triskel_white.png" alt="logo">
+
+    </a>
+    Triskel
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/triskellib/triskel" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    triskellib/triskel
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coordinate-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordinate system
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waypoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Waypoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Builder
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Builder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating nodes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating edges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the layout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dot-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dot notation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-renderer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using a renderer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node coordinates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-waypoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge waypoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#node-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node dimensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph dimensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renderers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renderers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Other methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cairo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cairo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cairo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pngrenderer" class="md-nav__link">
+    <span class="md-ellipsis">
+      PNGRenderer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svgrenderer" class="md-nav__link">
+    <span class="md-ellipsis">
+      SVGRenderer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="api">API</h1>
+<h2 id="architecture">Architecture</h2>
+<p>Triskel uses a two step process for its API.</p>
+<ul>
+<li>First, a <a href="#builder">builder</a> is used to construct the graph (creating nodes, edges, setting node dimensions etc...).</li>
+<li>Then, a <a href="#layout">layout</a> for the provided graph can be constructed. The layout provides access to information such as a node's coordinates, or an edge's <a href="#waypoints">waypoints</a>.</li>
+</ul>
+<p>An optional third step is available: the <a href="#renderers">renderer</a>, it is used to go from coordinates to a visual representation (image or GUI component).</p>
+<h3 id="coordinate-system">Coordinate system</h3>
+<p><img align="right" alt="A simple graph" src="../assets/api/coordinates.png" /></p>
+<p>Coordinates, when given as a pair correspond to <code>(x, y)</code>. For example <code>(4, 2)</code> would be a point with x coordinate 4 and y coordinate 2.</p>
+<p>Coordinates in Triskel use floats, and have no units.</p>
+<p>Coordinates in Triskel correspond to the coordinates of the <strong>Top Left</strong> corner of an element. For example, in the diagram, the coordinates of <code>A</code> would be <code>(1, 0)</code> and those of <code>B</code> would be <code>(0, 2)</code>.</p>
+<p>Triskel will always return a graph where the <strong>minimum x and y values are 0</strong>. As you can see in the diagram, the top left corner of the bounding box of the graph is in <code>(0, 0)</code>. This means that <strong>all coordinates provided by Triskel are positive</strong>.</p>
+<h3 id="waypoints">Waypoints</h3>
+<p><img align="right" alt="Waypoints" src="../assets/api/waypoints.png" /></p>
+<p>Triskel models edges as a sequence of segments. This sequence of segments is represented as a list of <strong>waypoints</strong>.</p>
+<p>In the diagram, the edge <code>A -&gt; D</code> would be represented as the sequence of waypoints <code>A, B, C, D</code> (more precisely, using the coordinates <code>(4, 1), (4, 2), (1, 2), (1, 3)</code>).</p>
+<div class="admonition info">
+<p class="admonition-title">Notes</p>
+<ul>
+<li>Notice that the order is important, the final coordinate is where the arrow is pointing to.</li>
+<li>The inner coordinates in the list are used to draw two segments (for example <code>B</code> is used for <code>A-B</code> and for <code>B-C</code>), they are not duplicated.</li>
+</ul>
+</div>
+<h2 id="components">Components</h2>
+<h3 id="builder">Builder</h3>
+<p>The builder is used to construct a graph.</p>
+<p>It can be built using the <code>make_layout_builder</code> method:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label><label for="__tabbed_1_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">builder</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">triskel</span><span class="o">::</span><span class="n">make_layout_builder</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">builder</span> <span class="o">=</span> <span class="n">make_layout_builder</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">LayoutBuilder</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jtriskel</span><span class="p">.</span><span class="na">make_layout_builder</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="creating-nodes">Creating nodes</h4>
+<p>Nodes can be added to the graph with the <code>make_node</code> method.</p>
+<p>This method can be used to create a node with a given label or with given dimensions.</p>
+<p>It returns the id of the created node.</p>
+<p>This id is necessary to later access the coordinate of this node, or to create an edge with this node.</p>
+<div class="admonition warning">
+<p class="admonition-title">Root</p>
+<p>The first node that is created must be the <code>root</code> of the graph.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label><label for="__tabbed_2_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// Creates a node</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">n1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">();</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// Creates a node with a label</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">n2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">(</span><span class="s">&quot;label&quot;</span><span class="p">);</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">// Creates a node with a given size</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">// Here, a width of 1 and a height of 2</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">n3</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Creates a node</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">n1</span>  <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">make_node</span><span class="p">()</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Creates a node with a label</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">n2</span>  <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">make_node</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Creates a node with a given size</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># Here, a width of 1 and a height of 2</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">n3</span>  <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">make_node</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Creates a node</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kt">long</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_node</span><span class="p">();</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">// Creates a node with a label</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="kt">long</span><span class="w"> </span><span class="n">n2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_node</span><span class="p">(</span><span class="s">&quot;label&quot;</span><span class="p">);</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1">// Creates a node with a given size</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1">// Here, a width of 1 and a height of 2</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="kt">long</span><span class="w"> </span><span class="n">n3</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_node</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="creating-edges">Creating edges</h4>
+<p>Edges can be added to the graph with the <code>make_edge</code> method.</p>
+<p>This method takes the id of the origin and destination nodes, and returns the id of the edge;</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label><label for="__tabbed_3_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// Creates nodes</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">n1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">();</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">n2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">();</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">// Creates an edge</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">e</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Creates nodes</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">n1</span>  <span class="o">=</span> <span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">()</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">n2</span>  <span class="o">=</span> <span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">()</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1"># Creates an edge</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">e</span>  <span class="o">=</span> <span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">// Creates nodes</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kt">long</span><span class="w"> </span><span class="n">n1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_node</span><span class="p">();</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kt">long</span><span class="w"> </span><span class="n">n2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_node</span><span class="p">();</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">// Creates an edge</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kt">long</span><span class="w"> </span><span class="n">e</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="creating-the-layout">Creating the layout</h4>
+<p>A builder can be used to create a <a href="#layout">layout</a> using the <code>build</code> method.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label><label for="__tabbed_4_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">build</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">layout</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">CFGLayout</span><span class="w"> </span><span class="n">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Lifetimes</p>
+<p>Triskel assumes that the builder is destroyed after a call to <code>build</code> is performed.</p>
+</div>
+<h4 id="dot-notation">Dot notation</h4>
+<p>Mainly for debug reasons, it is possible to export the graph contained in the builder to <a href="https://www.graphviz.org/">Graphviz</a>'s dot notation using the method <code>graphviz</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">C++</label><label for="__tabbed_5_2">Python</label><label for="__tabbed_5_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// Creates nodes</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">n1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">();</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">n2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">();</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1">// Creates an edge</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">e</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">);</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="c1">// Export the graph to dot notation</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">graphviz</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Creates nodes</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">n1</span>  <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">make_node</span><span class="p">()</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">n2</span>  <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">make_node</span><span class="p">()</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1"># Creates an edge</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">e</span>  <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">make_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="c1"># Export the graph to dot notation</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">builder</span><span class="o">.</span><span class="n">graphviz</span><span class="p">())</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">// Creates nodes</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kt">long</span><span class="w"> </span><span class="n">n1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_node</span><span class="p">();</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kt">long</span><span class="w"> </span><span class="n">n2</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_node</span><span class="p">();</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c1">// Creates an edge</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="kt">long</span><span class="w"> </span><span class="n">e</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">);</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="c1">// Export the graph to dot notation</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="na">graphviz</span><span class="p">());</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>The expected output for this graph would be:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>digraph G {
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>n1
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>n0
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>n0 [shape=square]
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>n0 -&gt; n1
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>}
+</span></code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">Identifying the root</p>
+<p>The root of the graph is square for easy identification.</p>
+</div>
+<h4 id="using-a-renderer">Using a renderer</h4>
+<p>If your nodes have labels, we need to use a <a href="#renderers">renderer</a> to calculate the size of those nodes. This can be done <strong>after all the nodes are built</strong> using the <code>measure_nodes</code> method.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">C++</label><label for="__tabbed_6_2">Python</label><label for="__tabbed_6_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">builder</span><span class="o">-&gt;</span><span class="n">measure_nodes</span><span class="p">(</span><span class="n">renderer</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">builder</span><span class="o">.</span><span class="n">measure_nodes</span><span class="p">(</span><span class="n">renderer</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">builder</span><span class="p">.</span><span class="na">measure_nodes</span><span class="p">(</span><span class="n">renderer</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">No renderer, no problem</p>
+<p>If no renderer is provided, Triskel assumes that a character is 1 large and a line is 1 tall.</p>
+</div>
+<h4 id="settings">Settings</h4>
+<p>A couple settings can be changed in the builder:</p>
+<ul>
+<li><code>x gutter</code>: This corresponds to the minimum horizontal distance between two nodes, or a node and a vertical segment. It defaults to 50.</li>
+<li><code>y gutter</code>: This corresponds to the minimum vertical distance between a horizontal segment and a node. It defaults to 40.</li>
+<li><code>edge height</code>: This corresponds to the minimum vertical distance between two horizontal segments. It defaults to 30.</li>
+</ul>
+<p><img alt="A simple graph" src="../assets/api/gutters.png" /></p>
+<p>In the diagram, distances determined by:</p>
+<ul>
+<li><code>x gutter</code> are represented in blue.</li>
+<li><code>y gutter</code> are represented in red.</li>
+<li><code>edge height</code> are represented in green.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">C++</label><label for="__tabbed_7_2">Python</label><label for="__tabbed_7_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">builder</span><span class="o">-&gt;</span><span class="n">set_x_gutter</span><span class="p">(</span><span class="mf">1.0F</span><span class="p">);</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">builder</span><span class="o">-&gt;</span><span class="n">set_y_gutter</span><span class="p">(</span><span class="mf">2.0F</span><span class="p">);</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">builder</span><span class="o">-&gt;</span><span class="n">set_edge_height</span><span class="p">(</span><span class="mf">3.0F</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">builder</span><span class="o">.</span><span class="n">set_x_gutter</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">builder</span><span class="o">.</span><span class="n">set_y_gutter</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="n">builder</span><span class="o">.</span><span class="n">set_edge_height</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">builder</span><span class="p">.</span><span class="na">set_x_gutter</span><span class="p">(</span><span class="mf">1.0F</span><span class="p">);</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">builder</span><span class="p">.</span><span class="na">set_y_gutter</span><span class="p">(</span><span class="mf">2.0F</span><span class="p">);</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">builder</span><span class="p">.</span><span class="na">set_edge_height</span><span class="p">(</span><span class="mf">3.0F</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="layout">Layout</h3>
+<p>The layout contains the coordinates necessary to draw the graph.</p>
+<h4 id="node-coordinates">Node coordinates</h4>
+<p>Using a node's id, you can retrieve its coordinates.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">C++</label><label for="__tabbed_8_2">Python</label><label for="__tabbed_8_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">();</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1">// [...]</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">pt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="o">-&gt;</span><span class="n">get_coords</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;x: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pt</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; y: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pt</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">n1</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">make_node</span><span class="p">()</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="c1"># [...]</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="n">pt</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">get_coords</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x: </span><span class="si">{</span><span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2"> y: </span><span class="si">{</span><span class="n">pt</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">long</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_node</span><span class="p">();</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="c1">// [...]</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="n">Point</span><span class="w"> </span><span class="n">pt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="p">.</span><span class="na">get_coords</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pt</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; y: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pt</span><span class="p">.</span><span class="na">y</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="edge-waypoints">Edge waypoints</h4>
+<p>Using a edge's id, you can retrieve its waypoints.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:3"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">C++</label><label for="__tabbed_9_2">Python</label><label for="__tabbed_9_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">);</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="c1">// [...]</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">waypoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="o">-&gt;</span><span class="n">waypoints</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">e</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">make_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="c1"># [...]</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="n">waypoints</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">get_waypoints</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">long</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_edge</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="p">);</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="c1">// [...]</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="n">List</span><span class="o">&lt;</span><span class="n">Point</span><span class="o">&gt;</span><span class="w"> </span><span class="n">waypoints</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="p">.</span><span class="na">get_waypoints</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="node-dimensions">Node dimensions</h4>
+<p>We can access a node's dimension with the <code>get_node_height</code> and <code>get_node_width</code> methods.
+This is especially important for nodes whose dimensions were calculated by a renderer.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">C++</label><label for="__tabbed_10_2">Python</label><label for="__tabbed_10_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">make_node</span><span class="p">();</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="c1">// [...]</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="o">-&gt;</span><span class="n">get_node_width</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="o">-&gt;</span><span class="n">get_node_height</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">n1</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">make_node</span><span class="p">()</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="c1"># [...]</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="n">width</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">get_node_width</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="n">height</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">get_node_height</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kt">long</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">make_node</span><span class="p">();</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="c1">// [...]</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="p">.</span><span class="na">get_node_width</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="kt">float</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="p">.</span><span class="na">get_node_height</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="graph-dimensions">Graph dimensions</h4>
+<p>We can access the graph's dimension with the <code>get_height</code> and <code>get_width</code> methods.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:3"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><input id="__tabbed_11_3" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">C++</label><label for="__tabbed_11_2">Python</label><label for="__tabbed_11_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="o">-&gt;</span><span class="n">get_width</span><span class="p">();</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="o">-&gt;</span><span class="n">get_height</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">width</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">height</span> <span class="o">=</span> <span class="n">layout</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="p">.</span><span class="na">get_width</span><span class="p">();</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layout</span><span class="p">.</span><span class="na">get_height</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="renderers">Renderers</h3>
+<p>Renders are used for drawing a layout. They are used with the <code>render</code> or <code>render_and_save</code> methods.</p>
+<p>The ImGui provides the <a href="#imguirenderer">ImguiRenderer</a> and Cairo extensions provides the <a href="#pngrenderer">PNGRenderer</a> and <a href="#svgrenderer">SVGRenderer</a>.</p>
+<h2 id="other-methods">Other methods</h2>
+<h3 id="version">Version</h3>
+<p>The function <code>git_version</code> allows you to identify which version of Triskel you are using.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:3"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">C++</label><label for="__tabbed_12_2">Python</label><label for="__tabbed_12_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">triskel</span><span class="o">::</span><span class="n">git_version</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">git_version</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">jtriskel</span><span class="p">.</span><span class="na">git_version</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="extensions">Extensions</h2>
+<h3 id="cairo">Cairo</h3>
+<p>The Cairo extension provides two renderers for saving layouts to images.</p>
+<p>These renderers use the <code>render_and_save</code> method.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:3"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><input id="__tabbed_13_3" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">C++</label><label for="__tabbed_13_2">Python</label><label for="__tabbed_13_3">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-c++ highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">auto</span><span class="w"> </span><span class="n">builder</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">triskel</span><span class="o">::</span><span class="n">make_layout_builder</span><span class="p">();</span>
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="c1">// [...]</span>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="k">auto</span><span class="w"> </span><span class="n">renderer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">triskel</span><span class="o">::</span><span class="n">make_svg_renderer</span><span class="p">();</span>
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">layout</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">build</span><span class="p">();</span>
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="n">layout</span><span class="o">-&gt;</span><span class="n">render_and_save</span><span class="p">(</span><span class="o">*</span><span class="n">renderer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;./out.svg&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">builder</span>  <span class="o">=</span> <span class="n">make_layout_builder</span><span class="p">();</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="c1"># [...]</span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="n">renderer</span> <span class="o">=</span> <span class="n">make_svg_renderer</span><span class="p">();</span>
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="n">layout</span>   <span class="o">=</span> <span class="n">builder</span><span class="o">-&gt;</span><span class="n">build</span><span class="p">();</span>
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="n">layout</span><span class="o">-&gt;</span><span class="n">render_and_save</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span> <span class="s2">&quot;./out.svg&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-java highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="n">LayoutBuilder</span><span class="w"> </span><span class="n">builder</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">jtriskel</span><span class="p">.</span><span class="na">make_layout_builder</span><span class="p">();</span>
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="c1">// [...]</span>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="n">ExportingRenderer</span><span class="w"> </span><span class="n">renderer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jtriskel</span><span class="p">.</span><span class="na">make_svg_renderer</span><span class="p">();</span>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="n">CFGLayout</span><span class="w"> </span><span class="n">layout</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="o">-&gt;</span><span class="n">build</span><span class="p">();</span>
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="n">layout</span><span class="o">-&gt;</span><span class="n">render_and_save</span><span class="p">(</span><span class="n">renderer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;./out.svg&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="pngrenderer">PNGRenderer</h4>
+<p>The PNG renderer is used to save layouts to PNG images. It is created with the <code>make_png_renderer</code> method.</p>
+<h4 id="svgrenderer">SVGRenderer</h4>
+<p>The SVG renderer is used to save layouts to SVG images. It is created with the <code>make_svg_renderer</code> method.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+        <div class="my-footer">
+            <div class="md-copyright">
+                Copyright © 2025 Jack ROYER
+            </div>
+
+            <a href="https://team.inria.fr/sushi/">
+                <img src="../assets/sushi.png"></img>
+                This work was done at the SUSHI team
+            </a>
+        </div>
+    </div>
+</div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.follow", "toc.integrate", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

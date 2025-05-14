@@ -1,0 +1,50 @@
+site_name: Triskel
+
+nav:
+  - Home: index.md
+  - Theory: theory.md
+  - Plugins: plugins.md
+  - Quick Start: quickstart.md
+  - API: api.md
+
+theme:
+  name: material
+  logo: assets/triskel_white.png
+  favicon: assets/favicon.ico
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+    - toc.follow
+    - toc.integrate
+    - content.tabs.link
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    primary: custom
+
+repo_url: https://github.com/triskellib/triskel
+repo_name: triskellib/triskel
+
+site_url: https://triskellib.github.io
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

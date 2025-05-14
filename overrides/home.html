@@ -1,0 +1,67 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Application header should be static for the landing page */
+    .md-header {
+      position: initial;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+  </style>
+
+<div id="hero">
+    <div class="md-grid md-typeset hero-title">
+        <div>
+            <img src="assets/triskel.png"></img>
+            <h1>Triskel</h1>
+        </div>
+        <p>Layouts for Control Flow Graphs</p>
+    </div>
+
+    <canvas id="animated-grid"></canvas>
+</div>
+
+<div id="plugins">
+    <div class="md-grid">
+        <p>Download plugins:</p>
+
+        <div class="platforms">
+          <a href="https://github.com/triskellib/binja">
+            <div class="platform">
+              <img src="assets/binja.png"></img>
+              <p>Binary Ninja</p>
+            </div>
+          </a>
+
+            <a href="https://github.com/triskellib/ghidra/releases/latest">
+              <div class="platform">
+                <img src="assets/ghidra.png"></img>
+                <p>Ghidra</p>
+              </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="scripts/grid.js"></script>
+{% endblock %}
